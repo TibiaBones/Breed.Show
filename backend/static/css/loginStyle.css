@@ -1,0 +1,116 @@
+/* .login-post {
+    height: 50px;
+    width: 395px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 50px;
+    color: #A0A3BD;
+    padding: 0 15px;
+}
+
+.login-password {
+    height: 50px;
+    width: 395px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 50px;
+    color: #A0A3BD;
+    padding: 0 15px;
+} */
+
+.login-error_input{
+    border: 2px solid #ED2E7E;
+}
+
+.login-error_massage {
+    width: 395px;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.login-error_svg {
+    width: 4px;
+    height: 12px;
+    margin: 0 20px 0 10px;
+}
+
+.login-error_text {
+    font-weight: 400;
+    font-size: 16px;
+    color: #ED2E7E;
+    margin: 5px 0 0;
+}
+
+.height100vh {
+    height: 100vh;
+}
+
+.margin0{
+    margin: 0;
+}
+
+.login_checkboxForgottenPassword {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 395px;
+    margin: 10px 0 40px;
+}
+
+.login-checkbox_container {
+    display: flex;
+    align-items: center;
+}
+
+.login-labelCheckbox {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+.login_forgottenPassword {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.login-massangersLabel {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    width: 395px;
+    margin-bottom: 25px;
+}
+
+.login-massangersLogo {
+    width: 395px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.login-logo_img {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}

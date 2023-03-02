@@ -1,0 +1,275 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="panel-background"></section>
+
+    <section class="accountHeader-background">
+        <div class="accountHeader-title">
+            
+            <!--
+            <svg class="accountHeader-account_img">
+                <use href="#account" />
+            </svg>
+            -->
+            {% if user.avatar %}
+            <div class="accountHeader-account_img">
+                <img src="{{user.avatar.url}}" alt="" width="250">
+            </div>
+            {% else %}
+            <svg class="accountHeader-account_img">
+                <use href="#account" />
+            </svg>
+            {% endif %}
+
+            <span class="accountHeader-accountName">{{user.first_name}} {{user.last_name}}</span>
+
+            <div class="accountHeader-cattery_flexContainer">
+                <svg class="nursery-big_img">
+                    <use href="#nursery" />
+                </svg>
+
+                <span class="accountHeader-catteryName">{{ kennel.name }}</span>
+            </div>
+        </div>
+
+        <div class="delimiter accountHeader-delimiter"></div>
+
+        <div class="accountHeader-mainMenu">
+            <div class="accountHeader-mainMenu_flexContainer" onclick="showBlock('Shop')">
+                <svg class="shopIco_img">
+                    <use href="#shopIco" />
+                </svg>
+
+                <span class="accountHeader-mainMenu_text">Мой магазин</span>
+            </div>
+
+            <div class="accountHeader-mainMenu_flexContainer" onclick="showBlock('Nursery')">
+                <svg class="nursery_img">
+                    <use href="#nursery" />
+                </svg>
+
+                <span class="accountHeader-mainMenu_text">Мой питомник</span>
+            </div>
+
+            <div class="accountHeader-mainMenu_flexContainer" onclick="showBlock('Promotions')">
+                <svg class="megaphone_img">
+                    <use href="#megaphone" />
+                </svg>
+
+                <span class="accountHeader-mainMenu_text">Промоакции</span>
+            </div>
+
+            <div class="accountHeader-mainMenu_flexContainer" onclick="showBlock('Publications')">
+                <svg class="publications_img">
+                    <use href="#publications" />
+                </svg>
+
+                <span class="accountHeader-mainMenu_text">Публикации</span>
+            </div>
+
+            <div class="accountHeader-mainMenu_flexContainer" onclick="showBlock('Info')">
+                <svg class="info_img">
+                    <use href="#info" />
+                </svg>
+
+                <span class="accountHeader-mainMenu_text">Информация</span>
+            </div>
+
+            <div class="accountHeader-buttonMenu_circle">
+                <svg class="dots_img">
+                    <use href="#dots" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="delimiter accountHeader-delimiter_bottom"></div>
+    </section>
+
+    <section class="accountContent-background">
+        <div class="tabSections tabShop" id="Shop">
+            <h1>пустая страничка "мой магазин"</h1>
+        </div>
+
+        <div class="tabSections tabNursery" id="Nursery">
+            <h1>пустая страничка "мой питомник"</h1>
+        </div>
+
+        <div class="tabSections tabPromotions" id="Promotions">
+            <h1>пустая страничка "промоакции"</h1>
+        </div>
+
+        <div class="tabSections tabPublications" id="Publications">
+            <h1>пустая страничка "публикации"</h1>
+        </div>
+
+        <div class="tabSections tabInfo" id="Info">
+            <div class="accountContent-infoPawsgramm flex-columnJCCenterAIFlexStart">
+                <div class="accountContent-info profile_shadow">
+                    <span class="accountContent-title">Краткая информация</span>
+                    <div class="accountContent-info_table">
+                        <p class="accountContent-secTitle">Сайт breed.show предназначен специально для заводчиков, та?
+                        </p>
+
+
+                        <div class="accountContent-info_delimiter"></div>
+
+                        <div class="accountContent-info_textContainer">
+                            <p class="accountContent-info_textLeft">Представитель:</p>
+                            <p class="accountContent-info_textRight">{{user.first_name}} {{user.last_name}}</p>
+                        </div>
+
+                        <div class="accountContent-info_delimiter"></div>
+
+                        <div class="accountContent-info_textContainer">
+                            <p class="accountContent-info_textLeft">Породы:</p>
+                            <p class="accountContent-info_textRight">{{ kennel.breed }}</p>
+                        </div>
+
+                        <div class="accountContent-info_delimiter"></div>
+
+                        <div class="accountContent-info_textContainer">
+                            <p class="accountContent-info_textLeft">Питомник:</p>
+                            <p class="accountContent-info_textRight">{{ kennel.name }}</p>
+                        </div>
+
+                        <div class="accountContent-info_delimiter"></div>
+
+                        <div class="accountContent-info_textContainer">
+                            <p class="accountContent-info_textLeft">Страна:</p>
+                            <p class="accountContent-info_textRight">{{ profile.location }}</p>
+                        </div>
+
+                        <div class="accountContent-info_delimiter"></div>
+
+                        <div class="accountContent-info_textContainer">
+                            <p class="accountContent-info_textLeft">Город:</p>
+                            <p class="accountContent-info_textRight">{{ profile.city }}</p>
+                        </div>
+
+                        <div class="accountContent-info_delimiter"></div>
+
+                        <div class="accountContent-info_textContainer">
+                            <p class="accountContent-info_textLeft">Статус:</p>
+                            <p class="accountContent-info_textRight">{{ user.groups.all.0.name }}</p>
+                        </div>
+
+                        <div class="accountContent-info_delimiter"></div>
+
+                        <div class="accountContent-info_textContainer">
+                            <p class="accountContent-info_textLeft">Работа:</p>
+                            <p class="accountContent-info_textRight"></p>
+                        </div>
+
+                        <div class="accountContent-info_delimiter"></div>
+
+                        <div class="accountContent-info_textContainer">
+                            <p class="accountContent-info_textLeft">Дата рождения:</p>
+                            <p class="accountContent-info_textRight"></p>
+                        </div>
+                        <div class="accountContent-info_delimiter"></div>
+
+                        <div class="accountContent-info_textContainer">
+                            <p class="accountContent-info_textLeft">Телефон:</p>
+                            <p class="accountContent-info_textRight"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="accountContent-pawsgramm">
+                    <div class="accountContent-pawsgramm_flexContainer">
+                        <span class="accountContent-pawsgramm_title">Павсграм</span>
+                        <span class="accountContent-pawsgramm_allPhotos">Все фото</span>
+                    </div>
+
+                    <div class="accountContent-pawsgramm_photos">
+                        <img class="pawsgramm-img" src="{% static 'images/Rectangle 10.png' %}">
+                        <img class="pawsgramm-img" src="{% static 'images/Rectangle 11.png' %}">
+                        <img class="pawsgramm-img" src="{% static 'images/Rectangle 12.png' %}">
+                        <img class="pawsgramm-img" src="{% static 'images/Rectangle 13.png' %}">
+                        <img class="pawsgramm-img" src="{% static 'images/Rectangle 14.png' %}">
+                        <img class="pawsgramm-img" src="{% static 'images/Rectangle 15.png' %}">
+                        <img class="pawsgramm-img" src="{% static 'images/Rectangle 16.png' %}">
+                        <img class="pawsgramm-img" src="{% static 'images/Rectangle 17.png' %}">
+                        <img class="pawsgramm-img" src="{% static 'images/Rectangle 18.png' %}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-columnJCCenterAIFlexStart">
+                <div class="accountContent-post profile_shadow">
+                    <div class="accountContent-post_accountNameBox">
+                        
+                        <!--
+                        <svg class="account-post_img">
+                            <use href="#account" />
+                        </svg>
+                        -->
+                        {% if user.avatar %}
+                        <img src="{{user.avatar.url}}" width="50" alt="">
+                        {% else %}
+                        <svg class="account-post_img">
+                            <use href="#account" />
+                        </svg>
+                        {% endif %}
+                        <div class="accountContent-post_nameDate">
+                            <a class="accountContent-post_accName" href="#">{{user.first_name}} {{user.last_name}}</a>
+                            <p class="accountContent-post_Date">
+                                <span>5</span>
+                                <span>января</span>
+                                <span>2023</span>
+                                г.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- предварительное отображение изображения
+                разобраться и добавить возможность добавлять несколько изображений с корректным отображением -->
+                    <img class="accountContent-post_img" src="{% static 'images/unsplash_Mv9hjnEUHR4.png' %}">
+
+
+                    <!-- предварительный вид текста. 
+                    разобраться и реализовать возможность разметки самим пользователем, 
+                    ограничить предварительное отображение текста с возможностью "развернуть" его.-->
+                    <p class="accountContent-post_text">
+                        ПАВСГРАМ на БРИД ШОУ Павсграм нужен для общения, развлечения и привлечения внимания. Человек
+                        одновременно с эстетическим удовольствием от просмотра, получает следующие возможности: Своего
+                        рода
+                        реклама, с помощью которой можно популяризировать свой Маркетплейс (Ваш магазин на Брид Шоу).
+                        Просмотр фото и видео контента иных пользователей. Это страница для обмена фотографиями и
+                        видеозаписями, развлекательный и познавательный контент из жизни питомников. В настоящее время
+                        на
+                        странице Павсграм представлена только основная часть – это лента активности (фото и видео), есть
+                        возможность ставить лайки и комментировать. В дальнейшем, будут добавлены опции: поиск (по
+                        хештэгам,
+                        аккаунты, места). Планируется лента «Новости».
+                    </p>
+
+                    <div class="accountContent-post_likeComments">
+                        <div class="accountContent-post_LCFlexElement">
+                            <svg class="like_img">
+                                <use href="#like" />
+                            </svg>
+                            <p class="likescommentsQuantity">12345</p>
+                        </div>
+
+                        <div class="accountContent-post_LCFlexElement marginLeft30">
+                            <svg class="comments_img">
+                                <use href="#comments" />
+                            </svg>
+                            <p class="likescommentsQuantity">345</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+{% endblock %}

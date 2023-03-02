@@ -1,0 +1,152 @@
+ul{
+    list-style-image: url(images/listMarker.svg); 
+}
+
+.marginBottom25vh{
+    margin-bottom: 25vh;
+}
+
+.registration-label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin: 30px 0;
+    max-width: 330px;
+    text-align: center;
+}
+
+.height100 {
+    height: 100%;
+}
+
+.loginRegistration-secContainer::-webkit-scrollbar{
+    width: 40px;
+}
+
+.loginRegistration-secContainer::-webkit-scrollbar-track{
+    background: #222831;
+    border-radius: 16px;
+}
+
+.loginRegistration-secContainer::-webkit-scrollbar-thumb{
+    /* width: 8px; */
+    /* height: 100px; */
+    background: #A0A3BD;
+    /* background: url(images/scrollBar.svg); */
+    border-radius: 16px;
+    border: 16px solid #222831;
+}
+
+.marginBottom0 {
+    margin-bottom: 0;
+}
+
+.marginBottom30 {
+    margin-bottom: 30px;
+}
+
+.marginTop15 {
+    margin-top: 15%;
+}
+
+ul {
+    width: 395px;
+    padding-left: 30px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.registration-statusСhoice {
+    max-width: 165px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registration-statusСhoice_flexContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-statusСhoiceButton_img {
+    width: 25px;
+    height: 24px;
+}
+
+.off {
+    display: none;
+}
+
+
+.registration-radio_img {
+    width: 25px;
+    height: 24px;
+}
+
+
+.registration-statusСhoice_text {
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+
+.registration-breederFlexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-petСhoice {
+    max-width: 230px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.registration-wayf_flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-shape_img {
+    width: 21px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.registration-account_img {
+    width: 230px;
+    height: 230px;
+}
+
+.registration-selectPhoto {
+    text-decoration-line: underline;
+
+}
+
+.registration-terms {
+    margin: 0 45px 30px 45px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.registration-checkbox {
+    margin: 5px;
+    height: 25px;
+    width: 25px;
+}
+
+.registration-paragraph {
+    font-size: 20px;
+    margin: 0 0 0 10px;
+}
