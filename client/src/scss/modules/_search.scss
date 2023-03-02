@@ -1,0 +1,18 @@
+.Search {
+  height: 50px;
+  width: 550px;
+  border: 2px solid #E6E8EC;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  &-Input{
+    height: 20px;
+    width: 480px;
+    border: none;
+    outline: none;
+    margin-left: 15px;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+  }
+}

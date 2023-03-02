@@ -1,0 +1,702 @@
+body {
+    border: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1280px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.header{
+
+}
+
+.header-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: #FCFCFC;
+}
+
+.header-box_widthFlex {
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menuLogoWordmark {
+    width: 200px;
+    margin-left: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-flexBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dFlexJCCenterAICenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.displayNone {
+    display: none;
+}
+
+.header-searchFieldContainer {
+    height: 50px;
+    width: 550px;
+    border: 2px solid #E6E8EC;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-searchField {
+    height: 20px;
+    width: 480px;
+    border: none;
+    outline: none;
+    margin-left: 15px;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.header-buttonLogin {
+    width: 190px;
+    height: 50px;
+    background-color: #3772FF;
+    border-radius: 90px;
+    border: none;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FCFCFC;
+    margin-right: 30px;
+}
+
+.account_name {
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu_img {
+    width: 24px;
+    height: 19px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.logo_img {
+    width: 33px;
+    height: 33px;
+    margin-right: 10px;
+}
+
+.wordmark_img {
+    width: 93px;
+    height: 13px;
+}
+
+.searchButton_img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.account_img {
+    width: 36px;
+    height: 36px;
+    margin: 0 30px 0 10px;
+}
+
+.modalMenu-container {
+    width: 100%;
+    display: none;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+
+
+.modalMenu-background {
+    width: 100%;
+    height: 100vh;
+    background-color: #222831;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.modalMenu-menu {
+    width: 320px;
+    background-color: #F7F7FC;
+    min-height: 100vh;
+    padding: 0 20px 0 30px;
+}
+
+.modalMenu-closeLogoWordmark {
+    width: 200px;
+    margin-left: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.modalMenu-linksBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 55px;
+}
+
+.modalMenu-linkElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modalMenu-links_ico{
+    width: 30px;
+    height: 30px;
+}
+
+.modalMenu-link {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    color: #363C38;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.panel-background {
+    height: 350px;
+    background: linear-gradient(45deg, #50DDC3, #624AF2);
+    margin-top: 80px;
+}
+
+.accountHeader-background {
+    background-color: #FCFCFC;
+}
+
+
+.accountHeader-title {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.accountHeader-account_img {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    top: -120px;
+    left: 30px;
+}
+
+
+
+.accountHeader-accountName {
+    margin: 0 50px 0 340px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #222831;
+}
+
+.accountHeader-cattery_flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nursery-big_img {
+    width: 30px;
+    height: 37px;
+}
+
+.accountHeader-catteryName {
+    margin-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #222831;
+}
+
+.delimiter {
+    height: 2px;
+    background-color: #E3E5F2;
+}
+
+.header-delimiter_width {
+    width: 100%;
+}
+
+.accountHeader-delimiter {
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.accountHeader-delimiter_bottom {
+    width: 100%;
+}
+
+.accountHeader-mainMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin: 0 155px;
+}
+
+.accountHeader-mainMenu_flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.shopIco_img {
+    height: 24px;
+    width: 24px;
+}
+
+.nursery_img {
+    height: 18px;
+    width: 22px;
+}
+
+.megaphone_img {
+    height: 24px;
+    width: 24px;
+}
+
+.publications_img {
+    width: 25px;
+    height: 24px;
+}
+
+.info_img {
+    width: 21px;
+    height: 20px;
+}
+
+.dots_img {
+    width: 16px;
+    height: 4px;
+}
+
+
+
+.accountHeader-mainMenu_text {
+    font-size: 16px;
+    color: #363C38;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.accountHeader-mainMenu_flexContainer:hover .accountHeader-mainMenu_text {
+    color: #3772FF;
+    transition: 200ms;
+}
+
+.accountHeader-mainMenu_svg path {
+    stroke: inherit;
+    stroke-width: inherit;
+    fill: inherit;
+}
+
+.accountHeader-mainMenu_flexContainer:hover svg {
+    fill: #3772FF;
+    transition: 200ms;
+
+
+}
+
+/* добавить через :after подчеркивание всего блока при наведении, 
+для этого придется изменить высоту всего меню */
+
+
+
+
+
+.accountHeader-buttonMenu_circle {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    background-color: #EFF0F6;
+    cursor: pointer;
+}
+
+.accountHeader-popUpmenu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 210px;
+    width: 290px;
+    background-color: #FCFCFC;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    /* bottom: 110px; */
+    top: 625px;
+    cursor: default;
+    padding: 20px;
+}
+
+.accountHeader-popUpmenu_listContainer {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.accountHeader-popUpmenu_text {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #363C38;
+}
+
+.accountHeader-popUpmenu_ico {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* 
+.eye_ico{
+    width: 24px;
+    height: 24px;
+}
+
+.searchSmall_ico{
+    width: 24px;
+    height: 24px;
+}
+
+.gear_ico{
+    width: 24px;
+    height: 24px;
+}
+
+.component_ico{
+    width: 24px;
+    height: 24px;
+} */
+
+.accountContent-background {
+    padding: 20px 30px 30px 30px;
+    height: 1660px;
+    background-color: #F7F7FC;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tabSections {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tabShop {
+    display: none;
+}
+
+.tabNursery {
+    display: none;
+}
+
+.tabPromotions {
+    display: none;
+}
+
+.tabPublications {
+    display: none;
+}
+
+.tabInfo {
+    display: flex;
+}
+
+/* .blockOff{
+    display: none;
+}
+
+.blockOn{
+    display: flex;
+} */
+
+.accountContent-infoPawsgramm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0 20px 0 30px;
+}
+
+.accountContent-info {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 16px;
+    background-color: #FCFCFC;
+
+    padding: 15px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+.profile_shadow {
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.accountContent-title {
+    Font-family: 'Montserrat', sans-serif;
+    ;
+    Font-size: 30px;
+    font-weight: 600;
+    color: #222831;
+}
+
+.accountContent-info_table {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accountContent-secTitle {
+    /* display: block; */
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 10px;
+    color: #222831;
+}
+
+.accountContent-info_delimiter {
+    height: 2px;
+    width: 100%;
+    background-color: #E3E5F2;
+    margin: 15px 0;
+
+}
+
+.accountContent-info_textContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.accountContent-info_textLeft {
+    max-width: 215px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 10px;
+    /* flex-grow: 3; */
+    color: #222831;
+}
+
+.accountContent-info_textRight {
+    max-width: 215px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 10px;
+    /* flex-grow: 3; */
+    color: #222831;
+}
+
+.accountContent-pawsgramm {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 16px;
+    background-color: #FCFCFC;
+    margin-top: 20px;
+    padding: 15px 20px 20px 20px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.accountContent-pawsgramm_flexContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accountContent-pawsgramm_title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #222831;
+}
+
+.accountContent-pawsgramm_allPhotos {
+    font-weight: 400;
+    font-size: 24px;
+    color: #363C38;
+}
+
+.accountContent-pawsgramm_photos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.pawsgramm-img {
+    max-height: 145px;
+    height: 100%;
+    max-width: 145px;
+    width: 100%;
+    object-fit: cover;
+    margin: 5px 0;
+}
+
+.flex-columnJCCenterAIFlexStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.accountContent-post {
+    max-width: 700px;
+    width: 100%;
+    background-color: #FCFCFC;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+
+.accountContent-post_accountNameBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.account-post_img {
+    height: 48px;
+    width: 48px;
+
+}
+
+.accountContent-post_nameDate {
+    margin-left: 10px;
+}
+
+.accountContent-post_accName {
+    font-size: 20px;
+    margin: 0 0 4px 0;
+    color: #222831;
+    text-decoration: none;
+}
+
+.accountContent-post_Date {
+    font-size: 16px;
+    margin: 0 0 4px 0;
+    color: #363C38;
+}
+
+.accountContent-post_img {
+    display: block;
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+}
+
+.accountContent-post_text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #363C38;
+}
+
+.accountContent-post_likeComments {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.accountContent-post_LCFlexElement {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.marginLeft30 {
+    margin-left: 30px;
+}
+
+.like_img {
+    width: 36px;
+    height: 32px;
+}
+
+.comments_img {
+    width: 34px;
+    height: 33px;
+}
+
+.likescommentsQuantity {
+    font-weight: 700;
+    font-size: 16px;
+    color: #363C38;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.displayFlex {
+    display: flex;
+}
