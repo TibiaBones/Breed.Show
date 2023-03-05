@@ -11,21 +11,14 @@ router.get("/users", (req, res) =>
 );
 
 // POST Requests
-router.post(
-  "/users/create",
-  userValidator.createValidators(),
-  (req, res) =>
-    Util.handleValidation(req, res, () =>
-      userService
-        .doesUserWithLoginExist(req.body.login)
-        .then((doesExist) =>
-          doesExist
-            ? Util.handleConflict(
-                res,
-                "User already exists"
-              )
-            : userService.createUser(req.body).then(Util.handleData(res))
-        )
+router.post("/users/create", userValidator.createValidators(), (req, res) =>
+  userService
+    .createUser(req.body)
+    .then((data) => res.status(200).send(data))
+    .catch(({ message }) =>
+      res.status(500).send({
+        message: `Could not add User: ${message}`,
+      })
     )
 );
 

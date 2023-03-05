@@ -9,18 +9,11 @@ const userService = {
       login: user.login,
       email: user.email,
       password: user.password,
-    })
-      .then((userNew) => userNew)
-      .catch((error) => {
-        throw new Error(error);
-      }),
-
-  doesUserWithLoginExist: (login) =>
-    User.count({ where: { login: login } })
-      .then((count) => count !== 0)
-      .catch((error) => {
-        console.log(error);
-      }),
+      profile_status: user.profile_status,
+      city: user.city,
+      location: user.location,
+      avatar: user.avatar,
+    }).then((userNew) => userNew),
 };
 
 export default userService;
