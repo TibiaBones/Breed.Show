@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-import tutorialApi from "../../api/tutorials-api";
+import userApi from "../../api/users-api";
 
-const { useFindAllQuery } = tutorialApi;
+const { useFindAllQuery } = userApi;
 
 const Example: FC<any> = () => {
   const { data = [] } = useFindAllQuery();
@@ -14,17 +14,19 @@ const Example: FC<any> = () => {
         <tr>
           <th>Id</th>
           <th>Name</th>
-          <th>Description</th>
-          <th>Published</th>
+          <th>Last Name</th>
+          <th>Login</th>
+          <th>Email</th>
         </tr>
         </thead>
         <tbody>
-        {data.map(({ id, title, description, published }) => (
+        {data.map(({ id, first_name, last_name, login, email }) => (
           <tr key={id}>
             <td>{id}</td>
-            <td>{title}</td>
-            <td>{description}</td>
-            <td>{published}</td>
+            <td>{first_name}</td>
+            <td>{last_name}</td>
+            <td>{login}</td>
+            <td>{email}</td>
           </tr>
         ))}
         </tbody>
