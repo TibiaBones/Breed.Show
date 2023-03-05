@@ -1,7 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
 import Header from "./modules/header/Header";
-import Example from "./modules/Example";
+import Example from "./modules/example/Example";
 
 function App() {
   return (
