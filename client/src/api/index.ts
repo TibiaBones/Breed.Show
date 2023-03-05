@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseApi = createApi({
-  reducerPath: "congenicaApi",
+  reducerPath: "breedShowApi",
   baseQuery: fetchBaseQuery({ baseUrl: '/api' }),
   tagTypes: [],
   endpoints: () => ({}),

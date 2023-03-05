@@ -48,6 +48,8 @@
   },
   "resolutions": {},
   "devDependencies": {
+    "@types/react-redux": "^7.1.18",
+    "@types/react-router-dom": "^5.3.3",
     "@types/redux-form": "^8.3.5",
     "prettier": "^2.8.4"
   }
