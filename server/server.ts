@@ -1,8 +1,7 @@
 import express, { Express } from "express";
 import dotenv from "dotenv";
-import { readdirSync } from "fs";
-import { join } from "path";
-import db from "./app/models";
+import sequelize from "./app/sequelize/sequelize";
+import ServerRoutes from "./app/server-addons/server.routes";
 
 dotenv.config();
 
@@ -14,7 +13,7 @@ app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-db.sequelize
+sequelize
   .sync()
   .then(() => {
     console.log("Synced db.");
@@ -24,21 +23,12 @@ db.sequelize
   });
 
 // // drop the table if it already exists
-// db.sequelize.sync({ force: true }).then(() => {
+// db.sequelizeConnection.sync({ force: true }).then(() => {
 //   console.log("Drop and re-sync db.");
 // });
 
-// require("./app/routes/turorial.routes")(app);
 
-readdirSync(join(__dirname, "./app/routes"))
-  .filter(
-    (file) =>
-      file.indexOf(".") !== 0 &&
-      (file.slice(-3) === ".js" || file.slice(-3) === ".ts")
-  )
-  .forEach((file) => {
-    require(join(__dirname, "./app/routes", file))(app);
-  });
+ServerRoutes.configureRoutes(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

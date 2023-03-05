@@ -1,0 +1,41 @@
+{
+  "development": {
+    "host": "localhost",
+    "dialect": "postgres",
+    "username": "postgres",
+    "password": "somesecret",
+    "database": "Breed.Show",
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  },
+  "test": {
+    "host": "localhost",
+    "dialect": "postgres",
+    "username": "postgres",
+    "password": "somesecret",
+    "database": "Breed.Show",
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  },
+  "production": {
+    "host": "localhost",
+    "dialect": "postgres",
+    "username": "postgres",
+    "password": "somesecret",
+    "database": "Breed.Show",
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  }
+}
