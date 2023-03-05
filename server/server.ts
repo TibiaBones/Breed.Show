@@ -1,16 +1,12 @@
-const express = require("express");
-const dotenv = require('dotenv');
-// const cors = require("cors");
+import express, { Express } from "express";
+import dotenv from "dotenv";
+import { readdirSync } from "fs";
+import { join } from "path";
+import db from "./app/models";
 
 dotenv.config();
 
-const app = express();
-
-// var corsOptions = {
-//   origin: "http://localhost:8081"
-// };
-
-// app.use(cors(corsOptions));
+const app: Express = express();
 
 // parse requests of content-type - application/json
 app.use(express.json());
@@ -18,12 +14,12 @@ app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-const db = require("./app/models");
-db.sequelize.sync()
+db.sequelize
+  .sync()
   .then(() => {
     console.log("Synced db.");
   })
-  .catch((err) => {
+  .catch((err: Error) => {
     console.log("Failed to sync db: " + err.message);
   });
 
@@ -32,12 +28,17 @@ db.sequelize.sync()
 //   console.log("Drop and re-sync db.");
 // });
 
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Breed.Show application." });
-});
+// require("./app/routes/turorial.routes")(app);
 
-require("./app/routes/turorial.routes")(app);
+readdirSync(join(__dirname, "./app/routes"))
+  .filter(
+    (file) =>
+      file.indexOf(".") !== 0 &&
+      (file.slice(-3) === ".js" || file.slice(-3) === ".ts")
+  )
+  .forEach((file) => {
+    require(join(__dirname, "./app/routes", file))(app);
+  });
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

@@ -1,9 +1,11 @@
-const db = require("../models");
+import db  from "../models";
+import { Request, Response } from 'express';
+
 const Tutorial = db.tutorials;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Tutorial
-exports.create = (req, res) => {
+export const create = (req: Request, res: Response) => {
   // Validate request
   if (!req.body.title) {
     res.status(400).send({
@@ -21,10 +23,10 @@ exports.create = (req, res) => {
 
   // Save Tutorial in the database
   Tutorial.create(tutorial)
-    .then(data => {
+    .then((data: any) => {
       res.send(data);
     })
-    .catch(err => {
+    .catch((err: Error) => {
       res.status(500).send({
         message:
           err.message || "Some error occurred while creating the Tutorial."
@@ -33,15 +35,15 @@ exports.create = (req, res) => {
 };
 
 // Retrieve all Tutorials from the database.
-exports.findAll = (req, res) => {
+export const findAll = (req: Request, res: Response) => {
   const title = req.query.title;
-  var condition = title ? { title: { [Op.iLike]: `%${title}%` } } : null;
+  const condition = title ? { title: { [Op.iLike]: `%${title}%` } } : null;
 
   Tutorial.findAll({ where: condition })
-    .then(data => {
+    .then((data: any) => {
       res.send(data);
     })
-    .catch(err => {
+    .catch((err: Error) => {
       res.status(500).send({
         message:
           err.message || "Some error occurred while retrieving tutorials."
@@ -50,14 +52,14 @@ exports.findAll = (req, res) => {
 };
 
 // Find a single Tutorial with an id
-exports.findOne = (req, res) => {
+export const findOne = (req: Request, res: Response) => {
   const id = req.params.id;
 
   Tutorial.findByPk(id)
-    .then(data => {
+    .then((data: any) => {
       res.send(data);
     })
-    .catch(err => {
+    .catch((err: Error) => {
       res.status(500).send({
         message: "Error retrieving Tutorial with id=" + id
       });
@@ -65,13 +67,13 @@ exports.findOne = (req, res) => {
 };
 
 // Update a Tutorial by the id in the request
-exports.update = (req, res) => {
+export const update = (req: Request, res: Response) => {
   const id = req.params.id;
 
   Tutorial.update(req.body, {
     where: { id: id }
   })
-    .then(num => {
+    .then((num: number) => {
       if (num == 1) {
         res.send({
           message: "Tutorial was updated successfully."
@@ -82,7 +84,7 @@ exports.update = (req, res) => {
         });
       }
     })
-    .catch(err => {
+    .catch((err: Error) => {
       res.status(500).send({
         message: "Error updating Tutorial with id=" + id
       });
@@ -90,13 +92,13 @@ exports.update = (req, res) => {
 };
 
 // Delete a Tutorial with the specified id in the request
-exports.delete = (req, res) => {
+export const remove = (req: Request, res: Response) => {
   const id = req.params.id;
 
   Tutorial.destroy({
     where: { id: id }
   })
-    .then(num => {
+    .then((num: number) => {
       if (num == 1) {
         res.send({
           message: "Tutorial was deleted successfully!"
@@ -107,7 +109,7 @@ exports.delete = (req, res) => {
         });
       }
     })
-    .catch(err => {
+    .catch((err: Error) => {
       res.status(500).send({
         message: "Could not delete Tutorial with id=" + id
       });
@@ -115,15 +117,15 @@ exports.delete = (req, res) => {
 };
 
 // Delete all Tutorials from the database.
-exports.deleteAll = (req, res) => {
+export const deleteAll = (req: Request, res: Response) => {
   Tutorial.destroy({
     where: {},
     truncate: false
   })
-    .then(nums => {
+    .then((nums: number) => {
       res.send({ message: `${nums} Tutorials were deleted successfully!` });
     })
-    .catch(err => {
+    .catch((err: Error) => {
       res.status(500).send({
         message:
           err.message || "Some error occurred while removing all tutorials."
@@ -132,12 +134,12 @@ exports.deleteAll = (req, res) => {
 };
 
 // find all published Tutorial
-exports.findAllPublished = (req, res) => {
+export const findAllPublished = (req: Request, res: Response) => {
   Tutorial.findAll({ where: { published: true } })
-    .then(data => {
+    .then((data: any) => {
       res.send(data);
     })
-    .catch(err => {
+    .catch((err: Error) => {
       res.status(500).send({
         message:
           err.message || "Some error occurred while retrieving tutorials."
