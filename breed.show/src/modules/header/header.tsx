@@ -35,6 +35,7 @@ function Header() {
                         <use href="#account" />
                     </svg>
                 </div> */}
+                {/* запилить компонент для свг-шки аккаунта!!!! */}
             </div>
 
             <div className="delimiter header-delimiter_width"></div>
